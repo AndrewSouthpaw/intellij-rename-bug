@@ -1,0 +1,266 @@
+<templateSet group="TransparentClassroom">
+  <template name="actiondef" value="export const $foo$ = '$foo$'" description="Redux: action title" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cl" value="console.log($END$)" description="console.log" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cv" value="console.log('$foo$', $foo$)" description="console log something" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="desc" value="describe('$foo$', () =&gt; {$END$})" description="Mocha: describe" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="it" value="it('should $foo$', () =&gt; {$END$})" description="Mocha: it" toReformat="true" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ds" value="const { $foo$ } = $bar$" description="destructure props" toReformat="true" toShortenFQNames="true">
+    <variable name="bar" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dsp" value="const { $foo$ } = this.props" description="React: props destructure" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dss" value="const { $foo$ } = this.state" description="React: state destructure" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cm" value="$methodName$($params$) {$END$}" description="class method" toReformat="true" toShortenFQNames="true">
+    <variable name="methodName" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="&quot;params&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="jest" value="// @flow&#10;import React from 'react'&#10;import { shallow } from 'enzyme'&#10;import $bar$ from '../$foo$'&#10;&#10;const wrap = (fn, props = {}) =&gt; fn(&#10;  &lt;$bar$ $END$ {...props} /&gt;,&#10;)&#10;&#10;describe('$bar$', () =&gt; {&#10;  it('should render', () =&gt; {&#10;    console.log(wrap(shallow).debug())&#10;    // expect(wrap(shallow)).toMatchSnapshot()&#10;  })&#10;})&#10;" description="Jest: testing template" toReformat="true" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="bar" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="comppure" value="// @flow&#10;import React from 'react'&#10;&#10;type PropsT = {}&#10;&#10;export default class $foo$ extends React.PureComponent&lt;PropsT&gt; {&#10;  render() {&#10;    return (&#10;      $END$&#10;    )&#10;  }&#10;}" description="React: pure component template" toReformat="true" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="&quot;Foo&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="connectredux" value="import { connect, type Connector } from 'react-redux'&#10;&#10;type OwnPropsT = {}&#10;&#10;const mapStateToProps = (state, ownProps) =&gt; {&#10;  return {}&#10;}&#10;&#10;export { $FOO$ as $FOO$Test }&#10;const connector: Connector&lt;OwnPropsT, PropsT&gt; = connect(mapStateToProps)&#10;export default connector($FOO$)" description="Redux: connector stuff" toReformat="true" toShortenFQNames="true">
+    <variable name="FOO" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+  <template name="imp" value="import { $END$ } from '$foo$'" description="import destructured" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="impd" value="import $END$ from '$foo$'" description="import default" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($foo$) {&#10;  $END$&#10;}" description="if expression" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="af" value="($params$) =&gt; { $END$ }" description="anonymous function ES6" toReformat="true" toShortenFQNames="true">
+    <variable name="params" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="esl" value="// eslint-disable-line $THING$" description="Disable line on eslint" toReformat="false" toShortenFQNames="true">
+    <variable name="THING" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="sp" value="spit(&quot;$foo$&quot;, $foo$)$END$" description="spit" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="RHTML" value="true" />
+      <option name="RUBY" value="true" />
+    </context>
+  </template>
+  <template name="t" value="t('$NAME$')" description="i18n translate" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="RHTML" value="true" />
+      <option name="RUBY" value="true" />
+    </context>
+  </template>
+  <template name="=" value="&lt;%= $END$ %&gt;" description="ERB: &lt;%= ... =&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="RHTML" value="true" />
+    </context>
+  </template>
+  <template name="%" value="&lt;% $foo$ %&gt;" description="ERB: &lt;% ... %&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="RHTML" value="true" />
+    </context>
+  </template>
+  <template name="puts=" value="puts '='*100" description="Ruby: Dividing line" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="RHTML" value="true" />
+      <option name="RUBY" value="true" />
+    </context>
+  </template>
+  <template name="eslpt" value="// eslint-disable-line react/no-unused-prop-types" description="ESLint disable prop type usage" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="pu" value="puts &quot;$foo$ = #{$foo$}&quot;" description="Ruby: puts" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="RHTML" value="true" />
+      <option name="RUBY" value="true" />
+    </context>
+  </template>
+  <template name="actionspec" value="/* eslint-disable arrow-body-style */&#10;import { expect } from 'chai'&#10;import sinon from 'sinon'&#10;import Q from 'q'&#10;import axios from 'axios'&#10;import configureMockStore from 'redux-mock-store'&#10;import thunk from 'redux-thunk'&#10;import * as a from './actions'&#10;import * as t from '../shared/action_types'&#10;import '../test_helper'&#10;&#10;const middlewares = [thunk]&#10;const mockStore = configureMockStore(middlewares)&#10;&#10;describe('$foo$.actions', () =&gt; {&#10;  let sandbox = null&#10;  let deferred = null&#10;  let store = null&#10;&#10;  beforeEach(() =&gt; {&#10;    sandbox = sinon.sandbox.create()&#10;    deferred = Q.defer()&#10;    sandbox.stub(axios, 'get').returns(deferred.promise)&#10;    sandbox.stub(axios, 'post').returns(deferred.promise)&#10;    sandbox.stub(axios, 'put').returns(deferred.promise)&#10;    sandbox.stub(axios, 'delete').returns(deferred.promise)&#10;  })&#10;&#10;  afterEach(() =&gt; {&#10;    sandbox.restore()&#10;    store = null&#10;  })&#10;&#10;  describe('#foo', () =&gt; {&#10;    it('should do something', () =&gt; {&#10;      store = mockStore({})&#10;      deferred.resolve({ data: 'OK' })&#10;      const action = a.save()&#10;      return store.dispatch(action).then(() =&gt; {&#10;        expect(axios.put.args[0]).to.eql([&#10;          '/s/14/foo',&#10;          { foo: 'bar' },&#10;        ])&#10;        expect(store.getActions()).to.eql([&#10;          { type: 'FOO' },&#10;        ])&#10;      })&#10;    })&#10;  })&#10;})&#10;" description="Redux: action spec" toReformat="true" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reducerspec" value="// @flow&#10;import { expect } from 'chai'&#10;import * as t from '../../shared/action_types'&#10;import * as a from '../actions'&#10;import $foo$ from './$bar$'&#10;import '../../test_helper'&#10;&#10;describe('$bar$.reducers.$bar$', () =&gt; {&#10;  let state&#10;&#10;  function play(action) {&#10;    state = $foo$(state, action)&#10;  }&#10;&#10;  beforeEach(() =&gt; {&#10;    state = {}&#10;  })&#10;&#10;  describe('FOO', () =&gt; {&#10;    it('should do something', () =&gt; {&#10;      play(a.save())&#10;&#10;      expect(state).to.eql({})&#10;    })&#10;  })&#10;})&#10;" description="Redux: reducer spec" toReformat="true" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="bar" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="op" value="$foo$: $END$," description="JS: object property" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ref" value="ref={e =&gt; (this.$NAME$ = e)} " description="add a ref" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="==" value="$NAME$={$VALUE$}" description="name={value}" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="===" value="$NAME$={$NAME$}" description="name={value}" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cmb" value="$methodName$ = ($params$) =&gt; {$END$}" description="React: class method bound" toReformat="false" toShortenFQNames="true">
+    <variable name="methodName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="impt" value="import type { $bar$ } from '$foo$'" description="import type" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="bar" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="r" value="import { $foo$ } from 'ramda'" description="Ramda import" toReformat="false" toShortenFQNames="true">
+    <variable name="foo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="impr" value="import { $END$ } from 'ramda'" description="Import ramda" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="i18njs" value="import { tForFile } from '../../../shared/i18n'&#10;const t = tForFile('src.modules.$FOO$.components.$END$')" description="JS i18n import" toReformat="false" toShortenFQNames="true">
+    <variable name="FOO" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="wr" value="const wrapper = wrap(shallow$END$)" description="wrap enzyme" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="be" value="beforeEach(() =&gt; {&#10;  $END$&#10;})" description="Mocha: beforeEach" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ae" value="afterEach(() =&gt; {&#10;  $END$&#10;})" description="Mocha: afterEach" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="impl" value="import $NAME$ from '$NAME$'" description="import library" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ts" value="type StateT = {&#10;  $END$&#10;}" description="React: type State" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ec" value="export const $FOO$ = ($BAR$) =&gt; $END$" description="JS: export const" toReformat="false" toShortenFQNames="true">
+    <variable name="FOO" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="top" value="type OwnPropsT = {&#10;  $END$&#10;}" description="React: type own props" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="eslprop" value=" // eslint-disable-line react/no-unused-prop-types" description="eslint: no unused prop types" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
